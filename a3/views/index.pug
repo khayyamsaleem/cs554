@@ -1,6 +1,42 @@
-html
-    head
-        title= title
-        link(rel='stylesheet' type='text/css' href='public/css/styles.min.css')
-    body
-        h1= message
+<!DOCTYPE html>
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport", content="width=device-width, initial-scale=1.0")
+    meta(http-equiv="X-UA-Compatible", content="ie=edge")
+    title CS554 A3
+    link(rel="stylesheet", href="/public/css/styles.min.css")
+    script(src="https://code.jquery.com/jquery-3.3.1.min.js")
+    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js")
+  body
+    .container
+      .page-header(style="padding: 50px;")
+          h1= "Wacky Products"
+      .row
+        .col-sm-2
+          ul.nav.flex-column
+            each val in products
+              li.nav-item
+                a.nav-link(href=`#${val.id}`)= val.name
+        .col-sm-10
+          .row
+            each val in products
+              .col-sm-6.col-md-4
+                .card(id=val.id)
+                  img.card-image-top.img-fluid(src=`${val.img}`, alt=val.id)
+                  .card-body
+                    h1.card-title= val.name
+                    p= val.blurb
+                    button.btn.btn-primary(data-toggle='modal', data-target=`#modal-${val.id}`) Details
+    each val in products
+      .modal.fade(id=`modal-${val.id}`, tabindex='-1', role='dialog')
+        .modal-dialog
+          .modal-content
+            .modal-header
+              h1.modal-title= val.name
+              button.close(type='button', data-dismiss='modal', aria-label='Close')
+                span(aria-hidden='true') &times;
+            .modal-body
+              img.img-fluid(src=`${val.img}`, alt=val.id)
+              h2= val.blurb
+              p !{val.details}
