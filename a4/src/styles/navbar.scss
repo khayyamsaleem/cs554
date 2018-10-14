@@ -1,0 +1,26 @@
+.navbar {
+    background-color: #ffcccc;
+    display: flex;
+
+    input.filename {
+        padding-left: 20px;
+        background-color: #ffcccc;
+        border: 0px;
+        color: white;
+        font-size: 1.2em;
+        outline: none;
+    }
+
+    .buttons {
+        align-self: center;
+    }
+
+    a {
+        color: white;
+        align-self: center;
+        font-size: 1.2em;
+        margin-left: auto; 
+        padding-right: 20px;
+    }
+
+}
