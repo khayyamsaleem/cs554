@@ -1,6 +1,8 @@
 import React from "react"
 import Editor from "../components/Editor"
 import NavBar from "../components/Navbar"
+import RenderContainer from "../components/RenderContainer";
+import "../styles/app.scss"
 
 export default class MDEditor extends React.Component {
     constructor(props) {
@@ -20,10 +22,15 @@ export default class MDEditor extends React.Component {
             <NavBar 
                 code={this.state.code}
             />
-            <Editor
-                code={this.state.code}
-                updateCode={this.updateCode.bind(this)}
-            />
+            <div className="twins">
+                <Editor
+                    code={this.state.code}
+                    updateCode={this.updateCode.bind(this)}
+                />
+                <RenderContainer 
+                    code={this.state.code}
+                />
+            </div>
             </>
         )
     }

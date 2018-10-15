@@ -2,17 +2,11 @@ import React from "react"
 import MonacoEditor from "react-monaco-editor"
 
 export default class Editor extends React.Component {
-    editorDidMount() {
-        console.log('editorDidMount')
-    }
-
-    componentWillUnmount(){
-        console.log('componentWillUnmount')
-    }
 
     render() {
+        window.addEventListener('resize', this.handleResize)
         const code = this.props.code;
-        const options = { selectOnLineNumbers: true }
+        const options = { selectOnLineNumbers: true, automaticLayout: true }
         const requireConfig = {
             url: 'node_modules/monaco-editor/min/vs/loader.js',
             paths: {
@@ -21,13 +15,13 @@ export default class Editor extends React.Component {
         };
         return (
             <MonacoEditor
-                width="800"
-                height="900"
                 language="markdown"
+                ref="monaco"
                 value={code}
+                height="1000"
+                automaticLayout={true}
                 options={options}
                 onChange={code => this.props.updateCode(code)}
-                editorDidMount={this.editorDidMount}
                 name="editor"
                 requireConfig={requireConfig}
             />
