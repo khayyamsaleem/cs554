@@ -1,0 +1,17 @@
+{
+  "name": "a5",
+  "version": "1.0.0",
+  "description": "using a redis cache",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Khayyam Saleem",
+  "license": "ISC",
+  "pldege": "I pledge my honor that I have abided by the Stevens Honor System",
+  "dependencies": {
+    "bluebird": "^3.5.2",
+    "express": "^4.16.4",
+    "express-redis-cache": "^1.1.3"
+  }
+}
