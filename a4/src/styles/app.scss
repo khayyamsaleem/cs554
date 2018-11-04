@@ -1,0 +1,20 @@
+.md-editor {
+    height: 100%;
+    display: grid !important;
+    grid-template-columns: 1fr !important;
+    grid-template-rows: 1fr 10fr !important;
+
+    .twins {
+        height: 100% !important;
+        display: grid !important;
+        grid-template-columns: 1fr 1fr !important;
+
+        .renderContainer {
+            width: 50% !important
+        }
+        .editor {
+            width: 50% !important;
+        }
+    }
+
+}
