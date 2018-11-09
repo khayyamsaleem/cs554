@@ -10,10 +10,6 @@ export default class RenderContainer extends React.Component {
         }
     }
 
-    static getDerivedStateFromProps(nextProps, prevState){
-        return (nextProps.code !== prevState.code) ? { code: nextProps.code } : null
-    }
-
     render() {
         return (
             <div className="renderContainer">
