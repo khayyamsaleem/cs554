@@ -184,5 +184,3 @@ const DUMMY_DATA_URL = 'https://gist.githubusercontent.com/philbarresi/5cf15393d
 
 
 })()
-
-
