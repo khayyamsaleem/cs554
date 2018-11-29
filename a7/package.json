@@ -1,0 +1,19 @@
+{
+  "name": "websockets-server-and-worker",
+  "version": "1.0.0",
+  "description": "demonstration of basic websocket usage through Socket.io",
+  "author": "Khayyam Saleem",
+  "license": "MIT",
+  "scripts": {
+    "start": "concurrently \"node worker.js\" \"node index.js\""
+  },
+  "dependencies": {
+    "concurrently": "^4.1.0",
+    "cors": "^2.8.5",
+    "express": "^4.16.4",
+    "node-redis": "^0.1.7",
+    "node-redis-pubsub": "^4.0.0",
+    "node-uuid": "^1.4.8",
+    "socket.io": "^2.2.0"
+  }
+}

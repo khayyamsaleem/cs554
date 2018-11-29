@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+
+        <title>CS-554 a7 - Socket.io Demo</title>
+        <meta name="description" content="A demonstration of Socket.io">
+        <meta name="author" content="Khayyam Saleem">
+        <link rel="stylesheet" type="text/css" href="./css/styles.css">
+
+    </head>
+
+    <body>
+        <div id="app">
+            <form>
+                <label>Username: </label>
+                <input type="text" name="username"><br/>
+                <label>Query: </label>
+                <input type="text" name="query"><br/>
+                <label>Message: </label>
+                <input type="text" name="message"><br/>
+                <input type="submit">
+            </form>
+            <div id="output">
+                <ul id="results">
+                </ul>
+            </div>
+        </div>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>
+        <script
+             type="text/javascript"
+             src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+             integrity="sha256-3edrmyuQ0w65f8gfBsqowzjJe2iM6n0nKciPUp8y+7E="
+             crossorigin="anonymous"></script>
+        <script src="./js/scripts.js"></script>
+    </body>
+</html>
