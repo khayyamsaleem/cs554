@@ -5,7 +5,7 @@
   "author": "Khayyam Saleem",
   "license": "MIT",
   "scripts": {
-    "start": "concurrently -n \"WORKER,SERVER\" \"nodemon worker.js\" \"nodemon index.js\""
+    "start": "concurrently -n \"WORKER,SERVER\" \"node worker.js\" \"node index.js\""
   },
   "dependencies": {
     "concurrently": "^4.1.0",

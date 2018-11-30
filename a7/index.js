@@ -30,7 +30,11 @@ io.on('connection', (socket) => {
         })
         const hits = worker_response.researchResult.hits
 
-        io.emit('search query', {username, message, hits})
+        socket.emit('search query', {username, message, hits})
+    })
+
+    socket.on('disconnect', () => {
+        console.log('client disconnected')
     })
 
 
