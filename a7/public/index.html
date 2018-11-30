@@ -13,17 +13,15 @@
     <body>
         <div id="app">
             <form>
-                <label>Username: </label>
-                <input type="text" name="username"><br/>
-                <label>Query: </label>
-                <input type="text" name="query"><br/>
-                <label>Message: </label>
-                <input type="text" name="message"><br/>
+                <label for="username">Username: </label>
+                <input id="username" type="text" name="username"><br/>
+                <label for="query">Query: </label>
+                <input id="query" type="text" name="query"><br/>
+                <label for="message">Message: </label>
+                <input id="message" type="text" name="message"><br/>
                 <input type="submit">
             </form>
             <div id="output">
-                <ul id="results">
-                </ul>
             </div>
         </div>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.2.0/socket.io.slim.js"></script>

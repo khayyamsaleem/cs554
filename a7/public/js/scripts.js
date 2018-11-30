@@ -12,7 +12,9 @@ $(() => {
                     .append(
                         $('<li>').text(`Username: ${username}`),
                         $('<li>').text(`Message: ${message}`),
-                        $('<li>').text("Result:").append(...urls.map(u => `<br/><img src="${u}" width="150px"/>`))
+                        $('<li>').text("Result:").append(
+                            ...urls.map(u => `<br/><img src="${u}" width="150px" alt="${message}"/>`)
+                        )
                     )
         )
     })
