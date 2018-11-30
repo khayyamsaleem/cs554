@@ -3,4 +3,5 @@
 
 Instructions:
 1) Create a `.env` file (use `.env.sample` as template)
-2) `yarn start` or `npm start`
+2) Start redis server on port 6379
+3) `yarn start` or `npm start`

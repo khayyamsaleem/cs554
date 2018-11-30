@@ -6,12 +6,13 @@ $(() => {
     })
 
     socket.on('search query', (payload) => {
-        const { username, message, image_url } = payload
+        const { username, message, hits } = payload
+        const urls = hits.map(hit => hit.webformatURL)
         $('#output').append($('<ul>')
                     .append(
                         $('<li>').text(`Username: ${username}`),
                         $('<li>').text(`Message: ${message}`),
-                        $('<li>').text("Result:").append(`<br/><img src="${image_url}" width="150px"/>`)
+                        $('<li>').text("Result:").append(...urls.map(u => `<br/><img src="${u}" width="150px"/>`))
                     )
         )
     })
